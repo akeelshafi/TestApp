@@ -1,6 +1,7 @@
 package com.akeel.testapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +17,32 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("LIFECYCLE", "onStart called")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("LifeCycle", "onResume called")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("LIFECYCLE", "onPause called")
+
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("LIFECYCLE", "onStop called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("LIFECYCLE", "onRestart called")
+
     }
 }
