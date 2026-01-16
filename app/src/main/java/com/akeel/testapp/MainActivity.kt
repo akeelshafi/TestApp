@@ -25,10 +25,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    override fun onStop() {
-        super.onStop()
-        Log.d("LIFECYCLE", "onStop called")
-    }
+
 
     override fun onRestart() {
         super.onRestart()
