@@ -20,8 +20,30 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        Log.d("LIFECYCLE", "onStart called")
+    }
 
+    override fun onResume() {
+        super.onResume()
+        Log.d("LifeCycle", "onResume called")
+    }
 
+    override fun onPause() {
+        super.onPause()
+        Log.d("LIFECYCLE", "onPause called")
 
+    }
 
+    override fun onStop() {
+        super.onStop()
+        Log.d("LIFECYCLE", "onStop called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("LIFECYCLE", "onRestart called")
+
+    }
 }
