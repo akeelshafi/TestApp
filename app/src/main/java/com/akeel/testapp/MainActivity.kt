@@ -23,9 +23,5 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    override fun onRestart() {
-        super.onRestart()
-        Log.d("LIFECYCLE", "onRestart called")
 
-    }
 }
