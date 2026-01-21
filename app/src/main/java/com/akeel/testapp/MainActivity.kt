@@ -22,10 +22,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    override fun onResume() {
-        super.onResume()
-        Log.d("LifeCycle", "onResume called")
-    }
+
 
     override fun onPause() {
         super.onPause()
