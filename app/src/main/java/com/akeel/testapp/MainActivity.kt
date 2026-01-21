@@ -24,11 +24,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    override fun onPause() {
-        super.onPause()
-        Log.d("LIFECYCLE", "onPause called")
 
-    }
 
     override fun onStop() {
         super.onStop()
