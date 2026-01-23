@@ -1,5 +1,6 @@
 package com.akeel.testapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
@@ -18,6 +19,10 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val intent = Intent(this, MainActivity2::class.java)
+        startActivity(intent)
+
     }
 
     override fun onStart() {
@@ -46,4 +51,5 @@ class MainActivity : AppCompatActivity() {
         Log.d("LIFECYCLE", "onRestart called")
 
     }
+
 }
