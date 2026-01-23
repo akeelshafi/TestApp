@@ -1,8 +1,10 @@
 package com.akeel.testapp
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +17,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
         val textView = findViewById<TextView>(R.id.textView)
+        val btn = findViewById<Button>(R.id.button)
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -29,6 +34,11 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("key", "Akeel shafi kana")
             startActivity(intent)
 
+        }
+        btn.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.data = Uri.parse("tel:0123456789")
+            startActivity(intent)
         }
 
     }
