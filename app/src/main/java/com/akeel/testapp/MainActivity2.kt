@@ -23,6 +23,5 @@ class MainActivity2 : AppCompatActivity() {
         val value = intent.getStringExtra("key")
         textView.text = value
 
-
     }
 }
