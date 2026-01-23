@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         textView.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)
+            intent.putExtra("key", "Akeel shafi kana")
             startActivity(intent)
 
         }
