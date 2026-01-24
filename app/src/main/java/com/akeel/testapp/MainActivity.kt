@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val textView = findViewById<TextView>(R.id.textView)
         val btn = findViewById<Button>(R.id.button)
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -40,6 +42,10 @@ class MainActivity : AppCompatActivity() {
             intent.data = Uri.parse("tel:0123456789")
             startActivity(intent)
         }
+
+      supportFragmentManager.beginTransaction()
+          .replace(R.id.frameLayout, BlankFragment())
+          .commit()
 
     }
 
